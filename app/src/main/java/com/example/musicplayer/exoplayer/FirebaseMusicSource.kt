@@ -65,7 +65,7 @@ class FirebaseMusicSource @Inject constructor(private val musicDatabase: MusicDa
                 .setIconUri(song.description.iconUri)
                 .build()
         MediaBrowserCompat.MediaItem(desc, FLAG_PLAYABLE)
-    }
+    }.toMutableList()
 
     private var state: State = STATE_CREATED
         set(value) {
